@@ -18,4 +18,5 @@ class index extends Component {
     }
 }
 
-export default index;
+
+ReactDOM.render(<index />, document.getElementById('root'));
