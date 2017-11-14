@@ -7,15 +7,10 @@ class index extends Component {
         return (
             <div>
                 <Loop>
-                    <Stage>
+                    <Stage width={1024} height={576}>
 
-                        <World>
-                            <Body>
-                                // Sprite go here
-                            </Body>
+                            kj
 
-                        </World>
-                        
                     </Stage>
                 </Loop>
             </div>
