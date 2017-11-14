@@ -8,11 +8,14 @@ class index extends Component {
             <div>
                 <Loop>
                     <Stage>
-                    width={Dimensions.get('window').width}
-                    height={Dimensions.get('window').height}>
-                {/* <StateController /> */}
 
-                        dsjlkdfsjsd
+                        <World>
+                            <Body>
+                                // Sprite go here
+                            </Body>
+
+                        </World>
+                        
                     </Stage>
                 </Loop>
             </div>
