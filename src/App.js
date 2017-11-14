@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
+import { Loop, Stage } from 'react-game-kit';
 
 class App extends Component {
     render() {
         return (
             <div>
-                Hello World!!
+                <Loop>
+                    <Stage width={1024} height={576}>
+                            dsjlasdlasj
+                    </Stage>
+                </Loop>
             </div>
         );
     }
