@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Loop, Stage } from 'react-game-kit';
 
-import App from 'App';
+import App from './App';
 
 // class index extends Component {
 //     render() {
