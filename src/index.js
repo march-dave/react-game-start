@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Loop, Stage } from 'react-game-kit';
 
+import App from 'App';
+
 class index extends Component {
     render() {
         return (
@@ -13,11 +15,10 @@ class index extends Component {
 
                     </Stage>
                 </Loop> */}
-                Hello World
+               <App />
             </div>
         );
     }
 }
 
-
-ReactDOM.render(<index />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
