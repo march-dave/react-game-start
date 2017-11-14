@@ -4,21 +4,21 @@ import { Loop, Stage } from 'react-game-kit';
 
 import App from 'App';
 
-class index extends Component {
-    render() {
-        return (
-            <div>
-                {/* <Loop>
-                    <Stage width={1024} height={576}>
+// class index extends Component {
+//     render() {
+//         return (
+//             <div>
+//                 {/* <Loop>
+//                     <Stage width={1024} height={576}>
 
-                            kj
+//                             kj
 
-                    </Stage>
-                </Loop> */}
-               <App />
-            </div>
-        );
-    }
-}
+//                     </Stage>
+//                 </Loop> */}
+//                <App />
+//             </div>
+//         );
+//     }
+// }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render( <App /> , document.getElementById('root'));
