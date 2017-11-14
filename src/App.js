@@ -7,9 +7,11 @@ class App extends Component {
             <div>
                 <Loop>
                     <Stage width={1024} height={576}>
-                            dsjlasdlasj
+                            
                     </Stage>
                 </Loop>
+
+                <h1>Hello World</h1>
             </div>
         );
     }
