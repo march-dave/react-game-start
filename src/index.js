@@ -6,13 +6,14 @@ class index extends Component {
     render() {
         return (
             <div>
-                <Loop>
+                {/* <Loop>
                     <Stage width={1024} height={576}>
 
                             kj
 
                     </Stage>
-                </Loop>
+                </Loop> */}
+                Hello World
             </div>
         );
     }
