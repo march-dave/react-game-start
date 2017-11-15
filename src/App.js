@@ -9,7 +9,7 @@ class App extends Component {
             <div>
                 <Loop>
                     <Stage width={1024} height={576}>
-                        <Hello />
+                        <ChildComponent />
                     </Stage>
                 </Loop>                
             </div>
@@ -18,3 +18,22 @@ class App extends Component {
 }
 
 export default App;
+
+class ChildComponent extends React.Component {
+    static contextTypes = {
+      loop: PropTypes.object,
+    };
+  
+    update = () => {
+      // tick logic
+      
+    };
+  
+    componentDidMount() {
+      this.context.loop.subscribe(this.update);
+    }
+  
+    componentWillUnmount() {
+      this.context.loop.unsubscribe(this.update);
+    }
+  }
