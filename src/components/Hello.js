@@ -4,9 +4,7 @@ class Hello extends Component {
     render() {
         return (
             <div>
-                <World>
-                    <h1>Start</h1>
-                </World>
+                <h1>Start</h1>
             </div>
         );
     }
