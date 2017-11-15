@@ -9,7 +9,7 @@ class App extends Component {
             <div>
                 <Loop>
                     <Stage width={1024} height={576}>
-                        <ChildComponent />
+                        <Hello />
                     </Stage>
                 </Loop>                
             </div>
@@ -26,7 +26,7 @@ class ChildComponent extends React.Component {
   
     update = () => {
       // tick logic
-      
+      <h1>Hello Start2</h1>
     };
   
     componentDidMount() {
