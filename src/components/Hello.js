@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
-import { World }  from 'react-game-kit';
+import { Loop, Stage, World } from 'react-game-kit';
 
 class Hello extends Component {
     render() {
         return (
-            <World>
-                <div>Start</div>
-            </World>
+            <Loop>
+                <Stage>
+                    <World>
+                        <div>Start</div>
+                    </World>
+                </Stage>
+            </Loop>
         );
     }
 }
