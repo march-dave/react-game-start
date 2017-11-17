@@ -11,35 +11,33 @@ class App extends Component {
 
     render() {
         return (
-            <Loop>
-                <Stage>
-                    {/* <Hello /> */}
-                    {/* <ChildComponent /> */}
-                    <div>Hello</div>
-                </Stage>
-            </Loop>
-            
+            // <Loop>
+            //     <Stage>
+
+            //     </Stage>
+            // </Loop>
+            <div>Hello</div>
         );
     }
 }
+
 
 export default App;
 
 // class ChildComponent extends React.Component {
 //     static contextTypes = {
-//         loop: PropTypes.object,
+//       loop: PropTypes.object,
 //     };
-
+  
 //     update = () => {
-//         // tick logic
-//         <h1>Hello Start2</h1>
+//       // tick logic
 //     };
-
+  
 //     componentDidMount() {
-//         this.context.loop.subscribe(this.update);
+//       this.context.loop.subscribe(this.update);
 //     }
-
+  
 //     componentWillUnmount() {
-//         this.context.loop.unsubscribe(this.update);
+//       this.context.loop.unsubscribe(this.update);
 //     }
-// }
+//   }
