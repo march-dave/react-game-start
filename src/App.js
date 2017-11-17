@@ -13,8 +13,9 @@ class App extends Component {
         return (
             <Loop>
                 <Stage>
-                    <ChildComponent />
-                    <h1>jljkjfsdaj</h1>
+                    {/* <Hello /> */}
+                    {/* <ChildComponent /> */}
+                    <div>Hello</div>
                 </Stage>
             </Loop>
             
@@ -24,21 +25,21 @@ class App extends Component {
 
 export default App;
 
-class ChildComponent extends React.Component {
-    static contextTypes = {
-        loop: PropTypes.object,
-    };
+// class ChildComponent extends React.Component {
+//     static contextTypes = {
+//         loop: PropTypes.object,
+//     };
 
-    update = () => {
-        // tick logic
-        <h1>Hello Start2</h1>
-    };
+//     update = () => {
+//         // tick logic
+//         <h1>Hello Start2</h1>
+//     };
 
-    componentDidMount() {
-        this.context.loop.subscribe(this.update);
-    }
+//     componentDidMount() {
+//         this.context.loop.subscribe(this.update);
+//     }
 
-    componentWillUnmount() {
-        this.context.loop.unsubscribe(this.update);
-    }
-}
+//     componentWillUnmount() {
+//         this.context.loop.unsubscribe(this.update);
+//     }
+// }
