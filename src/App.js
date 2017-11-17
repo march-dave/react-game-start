@@ -12,7 +12,7 @@ class App extends Component {
     render() {
         return (
             <Loop>
-                <Stage width={1024} height={576}>
+                <Stage>
                     {/* <Hello /> */}
                     <ChildComponent />
                 </Stage>

@@ -32,7 +32,7 @@ export default class Rectangle extends Component {
     const {body} = this.body;
     // console.warn('loop', +new Date(), this.context.loop.loopID);
     //Do stuff here
-    // console.warn('body.position.y',  body.position.y);
+    console.warn('body.position.y',  body.position.y);
   };
 
   update = () => {
