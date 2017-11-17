@@ -13,10 +13,11 @@ class App extends Component {
         return (
             <Loop>
                 <Stage>
-                    {/* <Hello /> */}
                     <ChildComponent />
+                    <h1>jljkjfsdaj</h1>
                 </Stage>
             </Loop>
+            
         );
     }
 }
