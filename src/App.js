@@ -5,15 +5,45 @@ import Hello from '../src/components/Hello';
 
 class App extends Component {
 
-    constructor(props) {
-        super(props);
+    static contextTypes = {
+        loop: PropTypes.object,
+    };
+
+    loop = () => {
+        //Do stuff here
+    };
+
+    componentDidMount() {
+        this.loopID = this.context.loop.subscribe(this.loop);
+    }
+
+    componentWillUnmount() {
+        this.context.loop.unsubscribe(this.loopID);
+    }
+
+    getWrapperStyles() {
+        const x = Math.round(this.state.x * this.context.scale);
+
+        return {
+            position: 'absolute',
+            transform: `translate(${x}px, 0px) translateZ(0)`,
+            transformOrigin: 'top left',
+        };
     }
 
     render() {
+
+        let animationFrame;
+        const loop = () => {
+            // Update logic
+            animationFrame = requestAnimationFrame(loop);
+        }
+        animationFrame = requestAnimationFrame(loop);
+
         return (
             <Loop>
-                <Stage>
-                    <Hello />
+                <Stage width={1024} height={576}>
+
                 </Stage>
             </Loop>
         );
@@ -23,20 +53,9 @@ class App extends Component {
 
 export default App;
 
-// class ChildComponent extends React.Component {
-//     static contextTypes = {
-//       loop: PropTypes.object,
-//     };
-
-//     update = () => {
-//       // tick logic
-//     };
-
-//     componentDidMount() {
-//       this.context.loop.subscribe(this.update);
-//     }
-
-//     componentWillUnmount() {
-//       this.context.loop.unsubscribe(this.update);
-//     }
-//   }
+class Sprite extends Component {
+    render() {
+        // return();
+    }
+    
+  }
