@@ -13,7 +13,7 @@ class Hello extends Component {
     render() {
         return (
             <Loop>
-                <div>Hello World</div>
+                <div>Hello World</div>  
             </Loop>
         );
     }
