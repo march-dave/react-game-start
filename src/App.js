@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Loop, Stage } from 'react-game-kit';
 
 import Hello from '../src/components/Hello';
+import Sprite from '../src/components/Sprite';
 
 class App extends Component {
 
@@ -43,7 +44,13 @@ class App extends Component {
         return (
             <Loop>
                 <Stage width={1024} height={576}>
-
+                    <Sprite
+                        repeat={true}
+                        src="assets/character-sprite.png"
+                        scale={this.context.scale * 2}
+                        state={0}
+                        steps={[9, 9, 0, 4, 5]}
+                    />
                 </Stage>
             </Loop>
         );
@@ -52,10 +59,3 @@ class App extends Component {
 
 
 export default App;
-
-class Sprite extends Component {
-    render() {
-        // return();
-    }
-    
-  }
