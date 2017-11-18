@@ -12,7 +12,9 @@ class App extends Component {
     render() {
         return (
             <Loop>
-                <div>Hello 11</div>
+                <Stage>
+                    <Hello />
+                </Stage>
             </Loop>
         );
     }
