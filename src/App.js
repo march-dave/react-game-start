@@ -11,12 +11,9 @@ class App extends Component {
 
     render() {
         return (
-            // <Loop>
-            //     <Stage>
-
-            //     </Stage>
-            // </Loop>
-            <div>Hello</div>
+            <Loop>
+                <div>Hello 11</div>
+            </Loop>
         );
     }
 }
@@ -28,15 +25,15 @@ export default App;
 //     static contextTypes = {
 //       loop: PropTypes.object,
 //     };
-  
+
 //     update = () => {
 //       // tick logic
 //     };
-  
+
 //     componentDidMount() {
 //       this.context.loop.subscribe(this.update);
 //     }
-  
+
 //     componentWillUnmount() {
 //       this.context.loop.unsubscribe(this.update);
 //     }
