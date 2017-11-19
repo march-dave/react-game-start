@@ -42,15 +42,13 @@ class Hello extends Component {
     render() {
         return (
             <World onInit={this.physicsInit}>
-                {/* <Sprite
+                <Sprite
                     repeat={true}
-                    src="./assets/character-sprite.png"
-
+                    src="assets/character-sprite.png"
                     scale={this.context.scale * 2} 
                     state={0}
                     steps={[9, 9, 0, 4, 5]}
-                /> */}
-                Hello World
+                />
             </World>
         );
     }

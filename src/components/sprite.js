@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 class Sprite extends Component {
 
+    getImageStyles() {
+        const scaledWidth = Math.round(this.props.width * this.context.scale);
+      
+        return {
+          width: scaledWidth,
+          imageRendering: 'pixelated'
+        };
+      }
+
     render() {
         return (
             <div style={{
