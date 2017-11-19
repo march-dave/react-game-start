@@ -1,35 +1,14 @@
 import React, { Component } from 'react';
 import { Loop, Stage, World, Body } from 'react-game-kit';
 import PropTypes from 'prop-types';
-
 import GameLoop from '../src/utils/game-loop';
-
-
 import Hello from '../src/components/Hello';
-import Sprite from '../src/components/Sprite';
-// import Matter from 'Matter-js';
 
 class App extends Component {
-
-    // static contextTypes = {
-    //     loop: PropTypes.object,
-    // };
 
     constructor(props) {
         super(props);
     }
-
-    // loop = () => {
-    //     //Do stuff here
-    // };
-
-    // componentDidMount() {
-    //     this.loopID = this.context.loop.subscribe(this.loop);
-    // }
-
-    // componentWillUnmount() {
-    //     this.context.loop.unsubscribe(this.loopID);
-    // }
 
     getWrapperStyles() {
         const x = Math.round(this.state.x * this.context.scale);

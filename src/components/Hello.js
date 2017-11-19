@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Loop, Stage, WorldComponent, World } from 'react-game-kit';
 import PropTypes from 'prop-types';
 import Matter, { Engine, Events } from 'matter-js';
-
+import Sprite from './Sprite';
 class Hello extends Component {
 
     static contextTypes = {
@@ -42,7 +42,15 @@ class Hello extends Component {
     render() {
         return (
             <World onInit={this.physicsInit}>
-                <div>Hello World</div>
+                {/* <Sprite
+                    repeat={true}
+                    src="./assets/character-sprite.png"
+
+                    scale={this.context.scale * 2} 
+                    state={0}
+                    steps={[9, 9, 0, 4, 5]}
+                /> */}
+                Hello World
             </World>
         );
     }
