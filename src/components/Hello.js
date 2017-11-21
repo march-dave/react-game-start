@@ -1,49 +1,50 @@
 import React, { Component } from 'react';
-import { Loop, Stage, World, Body } from 'react-game-kit';
+import { Loop, Stage, World, Body, Sprite } from 'react-game-kit';
 import PropTypes from 'prop-types';
 import Matter, { Engine, Events } from 'matter-js';
 
 // import Body from './Body';
-import Sprite from './Sprite';
+// import Sprite from './Sprite';
 class Hello extends Component {
 
-    static contextTypes = {
-        loop: PropTypes.object,
-    };
+    // static contextTypes = {
+    //     loop: PropTypes.object,
+    // };
 
-    physicsInit = engine => {
-        const ground = Matter.Bodies.rectangle(512 * 3, 448, 1024 * 3, 64, {
-            isStatic: true,
-        });
+    // physicsInit = engine => {
+    //     const ground = Matter.Bodies.rectangle(512 * 3, 448, 1024 * 3, 64, {
+    //         isStatic: true,
+    //     });
 
-        const leftWall = Matter.Bodies.rectangle(-64, 288, 64, 576, {
-            isStatic: true,
-        });
+    //     const leftWall = Matter.Bodies.rectangle(-64, 288, 64, 576, {
+    //         isStatic: true,
+    //     });
 
-        const rightWall = Matter.Bodies.rectangle(3008, 288, 64, 576, {
-            isStatic: true,
-        });
+    //     const rightWall = Matter.Bodies.rectangle(3008, 288, 64, 576, {
+    //         isStatic: true,
+    //     });
 
-        Matter.World.addBody(engine.world, ground);
-        Matter.World.addBody(engine.world, leftWall);
-        Matter.World.addBody(engine.world, rightWall);
-    };
+    //     Matter.World.addBody(engine.world, ground);
+    //     Matter.World.addBody(engine.world, leftWall);
+    //     Matter.World.addBody(engine.world, rightWall);
+    // };
 
-    update = () => {
-        // tick logic
-    };
+    // update = () => {
+    //     // tick logic
+    // };
 
-    componentDidMount() {
-        this.context.loop.subscribe(this.update);
-    }
+    // componentDidMount() {
+    //     this.context.loop.subscribe(this.update);
+    // }
 
-    componentWillUnmount() {
-        this.context.loop.unsubscribe(this.update);
-    }
+    // componentWillUnmount() {
+    //     this.context.loop.unsubscribe(this.update);
+    // }
 
     render() {
         return (
-            <World onInit={this.physicsInit}>
+            // <World onInit={this.physicsInit}>
+            <World>
                 <Body
                     args={[0, 384, 64, 64, { inertia: Infinity }]}
                     ref={(b) => { this.body = b; }}
