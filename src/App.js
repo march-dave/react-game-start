@@ -22,33 +22,21 @@ class App extends Component {
 
     render() {
 
-        let animationFrame;
-        const loop = () => {
-            // Update logic
-            animationFrame = requestAnimationFrame(loop);
-        }
-        animationFrame = requestAnimationFrame(loop);
+        // let animationFrame;
+        // const loop = () => {
+        //     // Update logic
+        //     animationFrame = requestAnimationFrame(loop);
+        // }
+        // animationFrame = requestAnimationFrame(loop);
 
         return (
             <Loop>
                 <Stage width={1024} height={576}>
-                    
-                        {/* <Body args={[0,0,75,75]} ref={(b) => this.body = b.body}> */}
-                        {/* <Sprite
-                            repeat={true}
-                            src="assets/character-sprite.png"
-                            scale={this.context.scale * 2}
-                            state={0}
-                            steps={[9, 9, 0, 4, 5]}
-                        /> */}
-                        {/* </Body> */}
-                        <Hello />
-                    
+                    <Hello />
                 </Stage>
             </Loop>
         );
     }
 }
-
 
 export default App;
