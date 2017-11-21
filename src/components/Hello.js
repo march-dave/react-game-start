@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Loop, Stage, WorldComponent, World } from 'react-game-kit';
+import { Loop, Stage, World, Body } from 'react-game-kit';
 import PropTypes from 'prop-types';
 import Matter, { Engine, Events } from 'matter-js';
 
 // import Body from './Body';
-import Sprite from './Sprite';  
+import Sprite from './Sprite';
 class Hello extends Component {
 
     static contextTypes = {
@@ -44,16 +44,18 @@ class Hello extends Component {
     render() {
         return (
             <World onInit={this.physicsInit}>
-
-                {/* <Body args={[0, 0, 75, 75]} ref={(b) => this.body = b.body }> */}
-                <Sprite
-                    repeat={true}
-                    src="assets/character-sprite.png"
-                    scale={this.context.scale * 2}
-                    state={0}
-                    steps={[9, 9, 0, 4, 5]}
-                />
-                 {/* </Body> */}
+                <Body
+                    args={[0, 384, 64, 64, { inertia: Infinity }]}
+                    ref={(b) => { this.body = b; }}
+                >
+                    <Sprite
+                        repeat={true}
+                        src="assets/character-sprite.png"
+                        scale={this.context.scale * 2}
+                        state={0}
+                        steps={[9, 9, 0, 4, 5]}
+                    />
+                </Body>
 
             </World >
         );
