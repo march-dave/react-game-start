@@ -3,8 +3,6 @@ import { Loop, Stage, World, Body, Sprite } from 'react-game-kit';
 import PropTypes from 'prop-types';
 import Matter, { Engine, Events } from 'matter-js';
 
-// import Body from './Body';
-// import Sprite from './Sprite';
 class Hello extends Component {
 
     // static contextTypes = {
@@ -40,6 +38,19 @@ class Hello extends Component {
     // componentWillUnmount() {
     //     this.context.loop.unsubscribe(this.update);
     // }
+
+    move = (body, x) => {
+        Matter.Body.setVelocity(body, { x, y: 0 });
+    };
+
+    update = () => {
+        const { body } = this.body;
+        if (keys.isDown(keys.LEFT)) {
+            this.move(body, -5);
+        } else if (keys.isDown(keys.RIGHT)) {
+            this.move(body, 5);
+        }
+    };
 
     render() {
         return (
