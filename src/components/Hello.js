@@ -39,6 +39,14 @@ class Hello extends Component {
     //     this.context.loop.unsubscribe(this.update);
     // }
 
+    componentDidMount() {
+        this.context.loop.subscribe(this.update);
+    }
+
+    componentWillUnmount() {
+        this.context.loop.unsubscribe(this.update);
+    }
+
     move = (body, x) => {
         Matter.Body.setVelocity(body, { x, y: 0 });
     };
