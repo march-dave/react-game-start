@@ -5,9 +5,18 @@ import Matter, { Engine, Events } from 'matter-js';
 
 class Hello extends Component {
 
-    // static contextTypes = {
-    //     loop: PropTypes.object,
-    // };
+    constructor(props) {
+        super(props);
+        this.state = {
+            positionY: 0,
+            positionX: 0,
+            controller: true,
+        }
+    }
+
+    static contextTypes = {
+        loop: PropTypes.object,
+    };
 
     // physicsInit = engine => {
     //     const ground = Matter.Bodies.rectangle(512 * 3, 448, 1024 * 3, 64, {
@@ -27,17 +36,9 @@ class Hello extends Component {
     //     Matter.World.addBody(engine.world, rightWall);
     // };
 
-    // update = () => {
-    //     // tick logic
-    // };
-
-    // componentDidMount() {
-    //     this.context.loop.subscribe(this.update);
-    // }
-
-    // componentWillUnmount() {
-    //     this.context.loop.unsubscribe(this.update);
-    // }
+    update = () => {
+        // tick logic
+    };
 
     componentDidMount() {
         this.context.loop.subscribe(this.update);
