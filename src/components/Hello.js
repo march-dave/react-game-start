@@ -5,61 +5,31 @@ import Matter, { Engine, Events } from 'matter-js';
 
 class Hello extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            positionY: 0,
-            positionX: 0,
-            controller: true,
-        }
-    }
-
     static contextTypes = {
         loop: PropTypes.object,
-    };
+        keys: PropTypes.object
+      };
 
-    // physicsInit = engine => {
-    //     const ground = Matter.Bodies.rectangle(512 * 3, 448, 1024 * 3, 64, {
-    //         isStatic: true,
-    //     });
-
-    //     const leftWall = Matter.Bodies.rectangle(-64, 288, 64, 576, {
-    //         isStatic: true,
-    //     });
-
-    //     const rightWall = Matter.Bodies.rectangle(3008, 288, 64, 576, {
-    //         isStatic: true,
-    //     });
-
-    //     Matter.World.addBody(engine.world, ground);
-    //     Matter.World.addBody(engine.world, leftWall);
-    //     Matter.World.addBody(engine.world, rightWall);
-    // };
-
-    update = () => {
-        // tick logic
-    };
-
-    componentDidMount() {
-        this.context.loop.subscribe(this.update);
-    }
-
-    componentWillUnmount() {
-        this.context.loop.unsubscribe(this.update);
-    }
-
-    move = (body, x) => {
+      move = (body, x) => {
         Matter.Body.setVelocity(body, { x, y: 0 });
-    };
-
-    update = () => {
+      };
+    
+      update = () => {
         const { body } = this.body;
         if (keys.isDown(keys.LEFT)) {
-            this.move(body, -5);
+          this.move(body, -5);
         } else if (keys.isDown(keys.RIGHT)) {
-            this.move(body, 5);
+          this.move(body, 5);
         }
-    };
+      };
+    
+      componentDidMount() {
+        this.context.loop.subscribe(this.update);
+      }
+    
+      componentWillUnmount() {
+        this.context.loop.unsubscribe(this.update);
+      }
 
     render() {
         return (
