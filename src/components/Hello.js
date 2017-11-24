@@ -5,9 +5,15 @@ import Matter, { Engine, Events } from 'matter-js';
 
 class Hello extends Component {
 
+    constructor(props) {
+        super(props);
+
+        const { keys, store } = this.props;
+    }
+
     static contextTypes = {
         loop: PropTypes.object,
-        keys: PropTypes.object
+        // keys: PropTypes.object
       };
 
       move = (body, x) => {
