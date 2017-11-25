@@ -22,10 +22,12 @@ class Hello extends Component {
     
       update = () => {
         const { body } = this.body;
+        // console.log('body: ', body);
         if (keys.isDown(keys.LEFT)) {
-          this.move(body, -5);
-        } else if (keys.isDown(keys.RIGHT)) {
-          this.move(body, 5);
+        // console.log('keys.LEFT');
+        //   this.move(body, -5);
+        // } else if (keys.isDown(keys.RIGHT)) {
+        //   this.move(body, 5);
         }
       };
     
