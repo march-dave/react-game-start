@@ -4,16 +4,20 @@ import PropTypes from 'prop-types';
 import Matter, { Engine, Events } from 'matter-js';
 
 class Hello extends Component {
-
     constructor(props) {
         super(props);
 
-        const { keys, store } = this.props;
+        // const { keys, store } = this.props;
     }
+
+    static propTypes = {
+        keys: PropTypes.object,
+        onEnterBuilding: PropTypes.func,
+        store: PropTypes.object,
+      };
 
     static contextTypes = {
         loop: PropTypes.object,
-        // keys: PropTypes.object
       };
 
       move = (body, x) => {
@@ -22,7 +26,11 @@ class Hello extends Component {
     
       update = () => {
         const { body } = this.body;
+        const { keys, store } = this.props;
         // console.log('body: ', body);
+
+        console.log('keys.LEFT');
+        // console.log(keys(a));
         if (keys.isDown(keys.LEFT)) {
         // console.log('keys.LEFT');
         //   this.move(body, -5);
