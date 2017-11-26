@@ -7,7 +7,8 @@ class Hello extends Component {
     constructor(props) {
         super(props);
 
-        // const { keys, store } = this.props;
+        const { keys, store } = this.props;
+        
     }
 
     static propTypes = {
