@@ -1,51 +1,34 @@
 import React, { Component } from 'react';
 import { Loop, Stage, World, Body, Sprite } from 'react-game-kit';
 import PropTypes from 'prop-types';
-import Matter, { Engine, Events } from 'matter-js';
+// import Matter, { Engine, Events } from 'matter-js';
 
 class Hello extends Component {
     constructor(props) {
         super(props);
-
-        const { keys, store } = this.props;
     }
 
-    static propTypes = {
-        keys: PropTypes.object,
-        onEnterBuilding: PropTypes.func,
-        store: PropTypes.object,
-      };
-
-    static contextTypes = {
-        loop: PropTypes.object,
-      };
-
-      move = (body, x) => {
+    move = (body, x) => {
         Matter.Body.setVelocity(body, { x, y: 0 });
-      };
-    
-      update = () => {
-        const { body } = this.body;
-        const { keys, store } = this.props;
-        // console.log('body: ', body);
+    };
 
-        console.log('keys.LEFT');
-        // console.log(keys(a));
+    update = () => {
+        const { body } = this.body;
         if (keys.isDown(keys.LEFT)) {
-        // console.log('keys.LEFT');
-        //   this.move(body, -5);
-        // } else if (keys.isDown(keys.RIGHT)) {
-        //   this.move(body, 5);
+            this.move(body, -5);
+        } else if (keys.isDown(keys.RIGHT)) {
+            this.move(body, 5);
         }
-      };
-    
-      componentDidMount() {
-        this.context.loop.subscribe(this.update);
-      }
-    
-      componentWillUnmount() {
-        this.context.loop.unsubscribe(this.update);
-      }
+    };
+
+    // componentDidMount() {
+    //     Matter.Events.on(this.context.engine, 'afterUpdate', this.update);
+    // }
+
+    // componentWillUnmount() {
+    //     Matter.Events.off(this.context.engine, 'afterUpdate', this.update);
+    // }
+
 
     render() {
         return (

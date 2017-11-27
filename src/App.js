@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Loop, Stage, World, Body } from 'react-game-kit';
+import { Loop, Stage, World, Body, Sprite } from 'react-game-kit';
 import PropTypes from 'prop-types';
-import GameLoop from '../src/utils/game-loop';
+// import Matter, { Engine, Events } from 'matter-js';
+// import GameLoop from '../src/utils/game-loop';
 import Hello from '../src/components/Hello';
 
 class App extends Component {
@@ -25,7 +26,9 @@ class App extends Component {
         return (
             <Loop>
                 <Stage width={1024} height={576}>
-                    <Hello />
+                    <World>
+                        <Hello />
+                    </World>
                 </Stage>
             </Loop>
         );
@@ -33,3 +36,4 @@ class App extends Component {
 }
 
 export default App;
+
