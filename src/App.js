@@ -11,15 +11,15 @@ class App extends Component {
         super(props);
     }
 
-    // getWrapperStyles() {
-    //     const x = Math.round(this.state.x * this.context.scale);
+    getWrapperStyles() {
+        const x = Math.round(this.state.x * this.context.scale);
 
-    //     return {
-    //         position: 'absolute',
-    //         transform: `translate(${x}px, 0px) translateZ(0)`,
-    //         transformOrigin: 'top left',
-    //     };
-    // }
+        return {
+            position: 'absolute',
+            transform: `translate(${x}px, 0px) translateZ(0)`,
+            transformOrigin: 'top left',
+        };
+    }
 
     render() {
 
