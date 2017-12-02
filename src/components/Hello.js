@@ -32,8 +32,8 @@ class Hello extends Component {
 
     render() {
         return (
-            // <World onInit={this.physicsInit}>
-            <World>
+            // <World>
+             <World onInit={this.physicsInit}>
                 <Body
                     args={[0, 384, 64, 64, { inertia: Infinity }]}
                     ref={(b) => { this.body = b; }}
