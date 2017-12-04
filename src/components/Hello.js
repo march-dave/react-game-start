@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Loop, Stage, World, Body, Sprite } from 'react-game-kit';
 import PropTypes from 'prop-types';
-// import Matter, { Engine, Events } from 'matter-js';
+import Matter, { Engine, Events } from 'matter-js';
 
 class Hello extends Component {
     constructor(props) {
