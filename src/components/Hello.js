@@ -21,13 +21,13 @@ class Hello extends Component {
         }
     };
 
-    componentDidMount() {
-        Matter.Events.on(this.context.engine, 'afterUpdate', this.update);
-    }
+    // componentDidMount() {
+    //     Matter.Events.on(this.context.engine, 'afterUpdate', this.update);
+    // }
 
-    componentWillUnmount() {
-        Matter.Events.off(this.context.engine, 'afterUpdate', this.update);
-    }
+    // componentWillUnmount() {
+    //     Matter.Events.off(this.context.engine, 'afterUpdate', this.update);
+    // }
 
 
     render() {
